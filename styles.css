@@ -26,7 +26,10 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { 
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth; 
+}
 
 body {
     margin: 0;
@@ -36,6 +39,7 @@ body {
     font-size: 1.0625rem;      /* 17px */
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+   
 }
 
 img { max-width: 100%; display: block; }
@@ -198,35 +202,6 @@ h1, h2 {
 
 .photo--hero { aspect-ratio: 4 / 5; }
 
-/* ---------- Banda de aviso ---------- */
-
-.notice {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.375rem;
-    flex-wrap: wrap;
-    margin: 0.5rem 0 0;
-    padding: 1.5rem;
-    background: var(--band);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-
-.notice p {
-    margin: 0;
-    color: var(--ink-soft);
-}
-
-.pill {
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    background: var(--pill);
-    font-size: 0.9375rem;
-    color: var(--ink-soft);
-    white-space: nowrap;
-}
-
 /* ---------- Carta y "Sobre nosotros" ---------- */
 
 .columns {
@@ -277,24 +252,368 @@ h1, h2 {
 
 .gallery__grid .photo { aspect-ratio: 1 / 1; }
 
+/* ---------- Cabeceras de sección centradas ---------- */
+
+.section__head {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section__head .eyebrow { margin-bottom: 0.75rem; }
+
+.section__title {
+    margin: 0;
+    font-size: 4rem;            /* 64px */
+    line-height: 1.05;
+}
+
+.section__title--left {
+    margin: 0 0 1.5rem;
+    font-size: 3rem;
+    text-align: left;
+}
+
+/* ---------- Horario ---------- */
+
+.hours {
+    padding: 5rem 0 0;
+    border-top: 1px solid var(--line);
+    margin-top: 4.5rem;
+}
+
+.hours__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1.25rem 1.375rem;
+    border: 1px solid var(--cream-line);
+    border-radius: 6px;
+    background: var(--cream-alt);
+}
+
+.day__name {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+/* Franja horaria: etiqueta en mono + hora tabular */
+.day__slot {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--cream-line);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+}
+
+.day__slot span {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+/* Día cerrado: relleno rayado y acento rojo */
+.day--closed {
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--cream) 0 10px,
+        var(--cream-alt) 10px 20px
+    );
+}
+
+.day--closed .day__name { color: var(--ink-mute); }
+
+.day__state {
+    margin: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--cream-line);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+}
+
+/* Celda destacada del menú de los viernes */
+.day--note {
+    background: var(--pill);
+    border-color: #e9d9ab;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.day--note:hover {
+    background: var(--cream);
+    border-color: var(--red);
+}
+
+.day__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+}
+
+/* ---------- Reservas y pedidos ---------- */
+
+.orders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    align-items: center;
+    margin-top: 5rem;
+    padding: 3.5rem 2.5rem;
+    background: var(--band);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+}
+
+.orders__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1rem;
+    align-items: baseline;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.step:last-child { padding-bottom: 0; border-bottom: 0; }
+
+.step__num {
+    grid-row: 1 / span 2;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--red);
+}
+
+.step__title {
+    margin: 0;
+    font-family: var(--font-title);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.step__text {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+/* ---------- Ubicación ---------- */
+
+.location { padding: 5rem 0 4.5rem; }
+
+.location__body {
+    display: grid;
+    grid-template-columns: 0.85fr 1.4fr;
+    gap: var(--gutter);
+    align-items: start;
+}
+
+/* Columna de datos */
+.location__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.info__label {
+    margin: 0 0 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;         /* 12px */
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+}
+
+.info__value {
+    margin: 0;
+    line-height: 1.65;
+    color: var(--ink-soft);
+}
+
+.info__value--mute { color: var(--ink-mute); }
+
+.link {
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.link:hover {
+    color: var(--red);
+    border-bottom-color: var(--red);
+}
+
+.location__cta {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+}
+
+/* Mapa */
+.location__map {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border: 1px solid var(--cream-line);
+    border-radius: 6px;
+    background: var(--cream);
+}
+
+.location__map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    filter: saturate(0.85);
+}
+
 /* ---------- Pie ---------- */
 
 .footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gutter);
-    margin-top: 4rem;
-    padding: 2.75rem 1.5rem 3rem;
+    padding: 3rem 1.5rem 1.75rem;
     background: var(--band);
     border-top: 1px solid var(--line);
 }
 
-.footer .eyebrow { margin-bottom: 0.875rem; }
+.footer__top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr auto;
+    gap: var(--gutter);
+    align-items: start;
+    padding-bottom: 2.25rem;
+}
 
-.footer p:not(.eyebrow) {
-    margin: 0;
-    line-height: 1.9;
+.brand--footer .brand__logo {
+    width: 44px;
+    height: 44px;
+}
+
+.brand--footer .brand__name { font-size: 1.125rem; }
+
+.footer__tagline {
+    margin: 1rem 0 0;
+    max-width: 22rem;
+    font-size: 0.9375rem;
+    line-height: 1.6;
     color: var(--ink-soft);
+}
+
+.footer__nav {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: start;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+}
+
+.footer__nav a {
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid transparent;
+}
+
+.footer__nav a:hover { border-bottom-color: var(--red); }
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+/* Botón de WhatsApp con icono */
+.footer__whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 999px;
+    padding: 0.75rem 1.5rem;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    flex: none;
+    display: block;
+}
+
+/* Redes sociales: iconos circulares */
+.socials {
+    display: flex;
+    gap: 0.625rem;
+}
+
+.social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1.5px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink-soft);
+    background: transparent;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.social:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+}
+
+.footer__legal {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--ink-mute);
 }
 
 /* ============================================================
@@ -313,9 +632,22 @@ h1, h2 {
 
     .hero,
     .columns,
-    .footer {
+    .location__body,
+    .orders {
         grid-template-columns: 1fr;
     }
+
+    .section__head { margin-bottom: 2.5rem; }
+    .section__title { font-size: 3rem; }
+    .section__title--left { font-size: 2.25rem; }
+
+    .hours { padding-top: 3.5rem; margin-top: 3rem; }
+    .hours__grid { grid-template-columns: repeat(2, 1fr); }
+
+    .orders { margin-top: 3.5rem; padding: 2.5rem 1.75rem; }
+
+    .location { padding: 3.5rem 0 3rem; }
+    .location__map { aspect-ratio: 3 / 2; }
 
     .hero { padding: 2.5rem 0; }
     .hero__title { font-size: 2.75rem; }
@@ -325,7 +657,24 @@ h1, h2 {
     .gallery__grid { grid-template-columns: 1fr; }
     .gallery__grid .photo { aspect-ratio: 3 / 2; }
 
-    .footer { gap: 2rem; padding-left: 1.25rem; padding-right: 1.25rem; }
+    .footer {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer__nav {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        gap: 1.5rem;
+        overflow-x: auto;
+    }
+
+    .footer__contact { align-items: flex-start; }
 }
 
 @media (max-width: 560px) {
@@ -333,10 +682,15 @@ h1, h2 {
 
     .hero__title { font-size: 2.25rem; }
     .columns h2 { font-size: 1.875rem; }
+    .section__title { font-size: 2.375rem; }
+    .section__title--left { font-size: 2rem; }
+    .location__cta { align-self: stretch; text-align: center; }
+
+    .hours__grid { grid-template-columns: 1fr; }
+    .orders__actions .btn { flex: 1 1 auto; text-align: center; }
+    .footer__whatsapp { justify-content: center; }
 
     .lead { text-align: left; }
 
     .hero__actions .btn { flex: 1 1 auto; text-align: center; }
-
-    .notice { justify-content: flex-start; text-align: left; }
 }
