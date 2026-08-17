@@ -1,37 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asador El Casar</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <section id="menu">
-        <div>
-            <ul class="">
-                <img src="" alt="">
-                <li>
-                    <a href="">nosotros</a>
-                </li>
-                 <li>
-                    <a href="">La Carta</a>
-                </li>
-                 <li>
-                    <a href="">conntactanos</a>
-                </li>
-                 <li>
-                    <a href="">Horario</a>
-                </li>
-                 <li>
-                    <a href="">Encuentranos</a>
-                </li>
-                 <li>
-                    <a href=""></a>
-                </li>
-            </ul>
-        </div>
-    </section>
+
+    <div class="page">
+
+        <!-- ============ Cabecera ============ -->
+        <header class="header">
+            <a class="brand" href="#">
+                <img class="brand__logo" src="logoAsadir.jpg" alt="Logo Asador El Casar">
+                <span class="brand__name">Asador El Casar</span>
+            </a>
+
+            <nav class="nav">
+                <a href="#la-carta">La carta</a>
+                <a href="#fotos">Fotos</a>
+                <a href="#horario">Horario</a>
+                <a href="#donde-estamos">Dónde estamos</a>
+                <a class="btn btn--dark" href="https://wa.me/34650711395">WhatsApp · 650 711 395</a>
+            </nav>
+        </header>
+
+        <!-- ============ Hero ============ -->
+        <section class="hero">
+            <div class="hero__text">
+                <p class="eyebrow">Asador de pollos · Comida para llevar</p>
+                <h1 class="hero__title">Pollo a la brasa,<br>como toda la vida</h1>
+                <p class="lead">
+                    Asador de pollos y comida para llevar en El Casar. Recetas caseras y
+                    productos de primera calidad, para comer en familia o llevar a casa.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--red" href="#la-carta">Ver la carta</a>
+                    <a class="btn btn--dark" href="#donde-estamos">Cómo llegar</a>
+                </div>
+            </div>
+
+            <div class="photo photo--hero">
+                <span>foto · pollo a la brasa</span>
+            </div>
+        </section>
+
+        <!-- ============ Aviso ============ -->
+        <aside class="notice">
+            <span class="pill">Todos los viernes</span>
+            <p>Menú especial — preferible bajo reserva el día anterior.</p>
+        </aside>
+
+        <!-- ============ Carta + Nosotros ============ -->
+        <section class="columns">
+
+            <div id="la-carta">
+                <p class="eyebrow">La carta</p>
+                <h2>Nuestros clásicos</h2>
+
+                <ul class="menu">
+                    <li><span class="menu__name">Pollo asado entero</span><span class="menu__price">12,00 €</span></li>
+                    <li><span class="menu__name">Medio pollo asado</span><span class="menu__price">6,50 €</span></li>
+                    <li><span class="menu__name">Costillas a la brasa</span><span class="menu__price">14,00 €</span></li>
+                    <li><span class="menu__name">Patatas fritas caseras</span><span class="menu__price">3,50 €</span></li>
+                    <li><span class="menu__name">Croquetas caseras (6 u.)</span><span class="menu__price">6,00 €</span></li>
+                </ul>
+
+                <p class="note">Precios de ejemplo — sustituir por los reales.</p>
+            </div>
+
+            <div id="nosotros">
+                <p class="eyebrow">La casa</p>
+                <h2>Sobre nosotros</h2>
+                <p class="lead">
+                    Un asador familiar de barrio donde la parrilla no se apaga. Recetas
+                    caseras y productos de primera calidad, con el trato de toda la vida.
+                    Reservas, recogida en tienda y comida para llevar.
+                </p>
+            </div>
+
+        </section>
+
+        <hr class="rule">
+
+        <!-- ============ Galería ============ -->
+        <section id="fotos" class="gallery">
+            <p class="eyebrow">La brasa</p>
+            <div class="gallery__grid">
+                <div class="photo"><span>foto · parrilla</span></div>
+                <div class="photo"><span>foto · pollos</span></div>
+                <div class="photo"><span>foto · mesa</span></div>
+            </div>
+        </section>
+
+        <!-- ============ Pie ============ -->
+        <footer class="footer">
+            <div id="horario">
+                <p class="eyebrow">Horario</p>
+                <p>Mar–Dom · 13:00–16:00</p>
+                <p>Vie y Sáb · 20:30–23:30</p>
+                <p>Lunes cerrado</p>
+            </div>
+
+            <div id="donde-estamos">
+                <p class="eyebrow">Dónde estamos</p>
+                <p>Calle Alcaldes de la Villa, 23</p>
+                <p>1.o piso, local 10</p>
+                <p>El Casar, 19170</p>
+            </div>
+
+            <div id="reservas">
+                <p class="eyebrow">Reservas y pedidos</p>
+                <p>WhatsApp · 650 71 13 95</p>
+                <p>Instagram · @asador_el_casar</p>
+            </div>
+        </footer>
+
+    </div>
+
 </body>
 </html>

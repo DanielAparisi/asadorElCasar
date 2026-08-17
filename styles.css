@@ -1,2 +1,342 @@
-@import "tailwindcss";
+/* ============================================================
+   Asador El Casar — hoja de estilos única (HTML + CSS, sin JS)
+   ============================================================ */
 
+:root {
+    --bg:            #f1f0ee;   /* fondo de página */
+    --band:          #e8e7e5;   /* bandas: aviso y pie */
+    --ink:          #262422;    /* texto principal */
+    --ink-soft:      #3d3a37;   /* párrafos */
+    --ink-mute:      #8d8880;   /* notas y placeholders */
+    --red:           #e02b20;   /* acento */
+    --line:          #d7d5d2;   /* hairlines */
+    --cream:         #fdf6e6;   /* relleno de fotos */
+    --cream-alt:     #fffdf7;
+    --cream-line:    #efe4cc;
+    --pill:          #fdf1d6;
+
+    --font-title: "Zilla Slab", "Roboto Slab", Rockwell, Georgia, serif;
+    --font-body:  "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --font-mono:  "Space Mono", "SFMono-Regular", Consolas, monospace;
+
+    --gutter: 3rem;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;      /* 17px */
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+/* Contenedor central: todo el contenido vive dentro de 1120px */
+.page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ---------- Piezas reutilizables ---------- */
+
+/* Etiquetas rojas en versalitas espaciadas */
+.eyebrow {
+    margin: 0 0 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;       /* 13px */
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    line-height: 1.4;
+}
+
+/* Botones y enlace-botón */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.375rem;
+    border: 1.5px solid currentColor;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn--dark { color: var(--ink); }
+.btn--dark:hover { background: var(--ink); color: var(--bg); }
+
+.btn--red { color: var(--red); }
+.btn--red:hover { background: var(--red); color: #fff; }
+
+/* Marcos de foto con relleno de rayas diagonales */
+.photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cream-line);
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--cream) 0 10px,
+        var(--cream-alt) 10px 20px
+    );
+}
+
+.photo span {
+    font-family: var(--font-mono);
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    color: var(--ink-mute);
+}
+
+/* Párrafos largos: justificados como en el diseño */
+.lead {
+    margin: 0;
+    max-width: 30rem;
+    color: var(--ink-soft);
+    text-align: justify;
+}
+
+h1, h2 {
+    font-family: var(--font-title);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+}
+
+.rule {
+    height: 0;
+    margin: 4.5rem 0 3rem;
+    border: 0;
+    border-top: 1px solid var(--line);
+}
+
+/* ---------- Cabecera ---------- */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand__logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.brand__name {
+    font-family: var(--font-title);
+    font-size: 1.375rem;        /* 22px */
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav > a:not(.btn) {
+    color: var(--ink);
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid transparent;
+}
+
+.nav > a:not(.btn):hover { border-bottom-color: var(--red); }
+
+/* ---------- Hero ---------- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    align-items: center;
+    padding: 3.25rem 0;
+}
+
+.hero__title {
+    margin: 0 0 1.5rem;
+    font-size: 3.75rem;         /* 60px */
+    line-height: 1.08;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.photo--hero { aspect-ratio: 4 / 5; }
+
+/* ---------- Banda de aviso ---------- */
+
+.notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.375rem;
+    flex-wrap: wrap;
+    margin: 0.5rem 0 0;
+    padding: 1.5rem;
+    background: var(--band);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.notice p {
+    margin: 0;
+    color: var(--ink-soft);
+}
+
+.pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    background: var(--pill);
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+    white-space: nowrap;
+}
+
+/* ---------- Carta y "Sobre nosotros" ---------- */
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gutter);
+    padding: 3.25rem 0 0;
+}
+
+.columns h2 {
+    margin: 0 0 1.75rem;
+    font-size: 2.25rem;         /* 36px */
+    line-height: 1.2;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.menu li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.75rem 0.75rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.menu__name { color: var(--ink); }
+.menu__price { color: var(--ink); white-space: nowrap; }
+
+.note {
+    margin: 1.25rem 0.75rem 0;
+    font-size: 0.8125rem;
+    color: var(--ink-mute);
+}
+
+/* ---------- Galería ---------- */
+
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.125rem;
+}
+
+.gallery__grid .photo { aspect-ratio: 1 / 1; }
+
+/* ---------- Pie ---------- */
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gutter);
+    margin-top: 4rem;
+    padding: 2.75rem 1.5rem 3rem;
+    background: var(--band);
+    border-top: 1px solid var(--line);
+}
+
+.footer .eyebrow { margin-bottom: 0.875rem; }
+
+.footer p:not(.eyebrow) {
+    margin: 0;
+    line-height: 1.9;
+    color: var(--ink-soft);
+}
+
+/* ============================================================
+   Adaptable
+   ============================================================ */
+
+@media (max-width: 900px) {
+    :root { --gutter: 2.5rem; }
+
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .nav { justify-content: center; gap: 1.25rem; }
+
+    .hero,
+    .columns,
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .hero { padding: 2.5rem 0; }
+    .hero__title { font-size: 2.75rem; }
+    .lead { max-width: none; }
+    .photo--hero { aspect-ratio: 3 / 2; }
+
+    .gallery__grid { grid-template-columns: 1fr; }
+    .gallery__grid .photo { aspect-ratio: 3 / 2; }
+
+    .footer { gap: 2rem; padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 1rem; }
+
+    .hero__title { font-size: 2.25rem; }
+    .columns h2 { font-size: 1.875rem; }
+
+    .lead { text-align: left; }
+
+    .hero__actions .btn { flex: 1 1 auto; text-align: center; }
+
+    .notice { justify-content: flex-start; text-align: left; }
+}
