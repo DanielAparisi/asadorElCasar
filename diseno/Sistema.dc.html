@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      background: #f4f1ea;
+      color: #262422;
+      font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #e02b20; text-decoration: none; }
+    a:hover { color: #b31f16; }
+  </style>
+</helmet>
+
+<div style="width: 900px; background: #f4f1ea; padding: 36px 36px 40px; display: flex; flex-direction: column; gap: 34px">
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <span style="align-self: flex-start; background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Vocabulario</span>
+    <h2 style="margin: 0; font-family: Anton, Haettenschweiler, Impact, sans-serif; font-size: 54px; line-height: 0.94; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Piezas del cartel</h2>
+    <p style="margin: 0; max-width: 34rem; font-size: 15px; line-height: 1.6; color: #3d3a37">Las piezas que se repiten en toda la web. Cambiar aquí un color o un grosor de borde es cambiar el tono de la página entera.</p>
+  </div>
+
+  <!-- Color -->
+  <div style="display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Color</p>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px">
+      <div style="display: flex; flex-direction: column; gap: 7px">
+        <div style="height: 72px; background: #e02b20; border: 3px solid #16130f"></div>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #3d3a37">#e02b20 · rojo</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px">
+        <div style="height: 72px; background: #16130f; border: 3px solid #16130f"></div>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #3d3a37">#16130f · negro</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px">
+        <div style="height: 72px; background: #f2b53c; border: 3px solid #16130f"></div>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #3d3a37">#f2b53c · ámbar</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px">
+        <div style="height: 72px; background: #f4f1ea; border: 3px solid #16130f"></div>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #3d3a37">#f4f1ea · papel</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 7px">
+        <div style="height: 72px; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px); border: 3px solid #16130f"></div>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #3d3a37">trama · hueco de foto</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tipografía -->
+  <div style="display: flex; flex-direction: column; gap: 14px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Tipografía</p>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start">
+      <div style="display: flex; flex-direction: column; gap: 6px; border-left: 3px solid #16130f; padding-left: 14px">
+        <span style="font-family: Anton, Haettenschweiler, Impact, sans-serif; font-size: 42px; line-height: 0.95; text-transform: uppercase; color: #16130f">Anton</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8d8880">Titulares, precios, días</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-left: 3px solid #16130f; padding-left: 14px">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; line-height: 1.05; color: #16130f">Space Grotesk</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8d8880">Textos y botones</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-left: 3px solid #16130f; padding-left: 14px">
+        <span style="font-family: 'Space Mono', monospace; font-size: 26px; font-weight: 700; line-height: 1.1; color: #16130f">Space Mono</span>
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #8d8880">Etiquetas y horas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones y etiquetas -->
+  <div style="display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Botones y etiquetas</p>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px">
+      <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #e02b20; color: #fff; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; border-radius: 2px; padding: 16px 26px; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Acción principal</a>
+      <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #f4f1ea; color: #16130f; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; border-radius: 2px; padding: 16px 26px; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Secundaria</a>
+      <span style="background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Etiqueta negra</span>
+      <span style="background: #e02b20; color: #fff; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Etiqueta roja</span>
+    </div>
+  </div>
+
+  <!-- Piezas -->
+  <div style="display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Piezas</p>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: start">
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 24px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Viernes</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 13px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #e02b20">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 24px; letter-spacing: 0.03em; text-transform: uppercase; color: #fff">Lunes</p>
+        <p style="margin: 0; padding-top: 10px; border-top: 2px solid rgba(255, 255, 255, 0.55); font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff">Cerrado</p>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: center; height: 118px; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 13px; color: #8d8880">hueco de foto</span>
+      </div>
+
+      <div style="display: flex; justify-content: center; padding-top: 4px">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 112px; height: 112px; border-radius: 50%; background: #f2b53c; border: 3px solid #16130f; transform: rotate(-9deg)">
+          <span style="font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #16130f">Pide ya</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 21px; line-height: 1.05; color: #16130f">650 71</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 21px; line-height: 1.05; color: #16130f">13 95</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Fila de carta -->
+  <div style="display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Fila de carta</p>
+    <div style="display: flex; flex-direction: column; border-top: 3px solid #16130f; max-width: 520px">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 3px solid #16130f">
+        <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Pollo asado entero</span>
+        <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">12,00 €</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Banda -->
+  <div style="display: flex; flex-direction: column; gap: 16px">
+    <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Banda</p>
+    <div style="display: flex; align-items: center; gap: 18px; overflow: hidden; background: #e02b20; border-top: 3px solid #16130f; border-bottom: 3px solid #16130f; padding: 12px 18px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; white-space: nowrap">
+      <span>Pollo a la brasa</span><span>◆</span>
+      <span>Comida para llevar</span><span>◆</span>
+      <span>Lunes cerrado</span><span>◆</span>
+      <span>Recogida en tienda</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":900,"height":1060}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

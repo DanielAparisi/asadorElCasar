@@ -1,0 +1,12 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Web · escritorio", "x": 0, "y": 0, "w": 1200, "h": 4560 },
+    { "file": "Movil.dc.html", "title": "Web · móvil", "x": 1320, "y": 0, "w": 390, "h": 3960 },
+    { "file": "Sistema.dc.html", "title": "Piezas del cartel", "x": 0, "y": 4720, "w": 900, "h": 1060 }
+  ],
+  "annotations": [
+    { "id": "nota-direccion", "x": 1320, "y": 4140, "w": 340, "text": "DIRECCIÓN: cartel de barrio.\n\nBloques planos de rojo, negro y ámbar; bordes de 3px con sombra dura; titulares en Anton a tamaño de cartel.\n\nSe mantienen Space Grotesk y Space Mono de la web actual. Zilla Slab sale: no aguanta el peso de un titular de cartel." },
+    { "id": "nota-contenido", "x": 1320, "y": 4460, "w": 340, "text": "CONTENIDO: sin tocar.\n\nLa carta, los textos y los huecos de foto son los mismos que ya tienes en index.html. Los huecos rayados están a propósito: esperan tus fotos reales.\n\nEn la carpeta hay un cartel con la carta real de tortas rellenas y precios — cuando quieras la metemos." }
+  ],
+  "launch": { "view": "canvas" }
+}

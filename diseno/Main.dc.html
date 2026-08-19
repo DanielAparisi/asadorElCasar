@@ -1,0 +1,405 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      background: #f4f1ea;
+      color: #262422;
+      font-family: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #e02b20; text-decoration: none; }
+    a:hover { color: #b31f16; }
+  </style>
+</helmet>
+
+<div style="width: 1200px; background: #f4f1ea; overflow: hidden">
+
+  <!-- ============ Barra superior ============ -->
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 32px; background: #16130f; padding: 14px 40px">
+    <div style="display: flex; align-items: center; gap: 14px">
+      <img src="./logo.jpg" alt="Asador El Casar" style="width: 52px; height: 52px; border-radius: 50%; border: 2px solid #e02b20; object-fit: cover">
+      <span style="font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 24px; letter-spacing: 0.03em; text-transform: uppercase; color: #f4f1ea">Asador El Casar</span>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 26px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">
+      <a href="#" style="color: #f4f1ea; border-bottom: 2px solid transparent; padding-bottom: 3px">La carta</a>
+      <a href="#" style="color: #f4f1ea; border-bottom: 2px solid transparent; padding-bottom: 3px">Fotos</a>
+      <a href="#" style="color: #f4f1ea; border-bottom: 2px solid transparent; padding-bottom: 3px">Horario</a>
+      <a href="#" style="color: #f4f1ea; border-bottom: 2px solid transparent; padding-bottom: 3px">Reservas</a>
+      <a href="#" style="color: #f4f1ea; border-bottom: 2px solid #e02b20; padding-bottom: 3px">Dónde estamos</a>
+    </div>
+
+    <a href="tel:+34650711395" style="display: flex; align-items: center; gap: 9px; background: #e02b20; color: #fff; padding: 11px 18px; border-radius: 2px">
+      <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; display: block; flex: none">
+        <path d="M6.3 3.5h2.9l1.5 3.7-2 1.4a11.5 11.5 0 0 0 5.4 5.4l1.4-2 3.7 1.5v2.9a1.6 1.6 0 0 1-1.8 1.6C10.6 19.6 4.4 13.4 4.7 5.3A1.6 1.6 0 0 1 6.3 3.5Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+      </svg>
+      <span style="font-family: Anton, Impact, sans-serif; font-size: 19px; letter-spacing: 0.05em">650 71 13 95</span>
+    </a>
+  </div>
+
+  <!-- ============ Hero ============ -->
+  <div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 48px; align-items: center; padding: 62px 40px 56px">
+
+    <div style="display: flex; flex-direction: column; gap: 26px">
+      <p style="margin: 0; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Asador de pollos · Comida para llevar</p>
+
+      <h1 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 104px; line-height: 0.88; letter-spacing: 0.005em; text-transform: uppercase; color: #16130f">
+        Pollo a la
+        <span style="display: inline-block; background: #e02b20; color: #f4f1ea; padding: 0 14px 8px; transform: rotate(-1.2deg)">brasa</span>,<br>
+        como toda la vida
+      </h1>
+
+      <p style="margin: 0; max-width: 30rem; color: #3d3a37; font-size: 17px; line-height: 1.7; text-wrap: pretty">
+        Asador de pollos y comida para llevar en El Casar. Recetas caseras y
+        productos de primera calidad, para comer en familia o llevar a casa.
+      </p>
+
+      <div style="display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px">
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #e02b20; color: #fff; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; border-radius: 2px; padding: 17px 28px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Ver la carta</a>
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #f4f1ea; color: #16130f; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; border-radius: 2px; padding: 17px 28px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Cómo llegar</a>
+      </div>
+    </div>
+
+    <div style="position: relative">
+      <div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 5; border: 3px solid #16130f; box-shadow: 12px 12px 0 #16130f; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 14px; letter-spacing: 0.04em; color: #8d8880">foto · pollo a la brasa</span>
+      </div>
+
+      <div style="position: absolute; top: -26px; right: -22px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 132px; height: 132px; border-radius: 50%; background: #f2b53c; border: 3px solid #16130f; transform: rotate(-9deg)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #16130f">Pide ya</span>
+        <span style="font-family: Anton, Impact, sans-serif; font-size: 25px; line-height: 1; color: #16130f">650 71</span>
+        <span style="font-family: Anton, Impact, sans-serif; font-size: 25px; line-height: 1; color: #16130f">13 95</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ Banda ============ -->
+  <div style="display: flex; align-items: center; gap: 20px; overflow: hidden; background: #e02b20; border-top: 3px solid #16130f; border-bottom: 3px solid #16130f; padding: 13px 40px; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #fff; white-space: nowrap">
+    <span>Pollo a la brasa</span><span>◆</span>
+    <span>Costillas</span><span>◆</span>
+    <span>Comida para llevar</span><span>◆</span>
+    <span>Recogida en tienda</span><span>◆</span>
+    <span>Lunes cerrado</span><span>◆</span>
+    <span>Menú especial los viernes</span><span>◆</span>
+    <span>Pollo a la brasa</span><span>◆</span>
+    <span>Costillas</span>
+  </div>
+
+  <!-- ============ Carta + Nosotros ============ -->
+  <div style="display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 56px; padding: 64px 40px 10px">
+
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span style="align-self: flex-start; background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">La carta</span>
+      <h2 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 60px; line-height: 0.94; letter-spacing: 0.01em; text-transform: uppercase; color: #16130f">Nuestros clásicos</h2>
+
+      <div style="display: flex; flex-direction: column; border-top: 3px solid #16130f; margin-top: 6px">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 1.5px solid #16130f">
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Pollo asado entero</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">12,00 €</span>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 1.5px solid #16130f">
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Medio pollo asado</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">6,50 €</span>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 1.5px solid #16130f">
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Costillas a la brasa</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">14,00 €</span>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 1.5px solid #16130f">
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Patatas fritas caseras</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">3,50 €</span>
+        </div>
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 18px; padding: 15px 4px; border-bottom: 3px solid #16130f">
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Croquetas caseras (6 u.)</span>
+          <span style="font-family: Anton, Impact, sans-serif; font-size: 28px; letter-spacing: 0.02em; color: #e02b20; white-space: nowrap">6,00 €</span>
+        </div>
+      </div>
+
+      <p style="margin: 4px 0 0; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.04em; color: #8d8880">Precios de ejemplo — sustituir por los reales.</p>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span style="align-self: flex-start; background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">La casa</span>
+      <h2 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 60px; line-height: 0.94; letter-spacing: 0.01em; text-transform: uppercase; color: #16130f">Sobre nosotros</h2>
+
+      <p style="margin: 0; color: #3d3a37; font-size: 17px; line-height: 1.75; text-wrap: pretty">
+        Un asador familiar de barrio donde la parrilla no se apaga. Recetas
+        caseras y productos de primera calidad, con el trato de toda la vida.
+        Reservas, recogida en tienda y comida para llevar.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 6px; background: #f2b53c; border: 3px solid #16130f; padding: 22px 24px; margin-top: 8px; transform: rotate(-0.8deg)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #16130f">La parrilla no se apaga</span>
+        <span style="font-family: Anton, Impact, sans-serif; font-size: 40px; line-height: 1; letter-spacing: 0.01em; text-transform: uppercase; color: #16130f">De martes a domingo</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ Galería ============ -->
+  <div style="display: flex; flex-direction: column; gap: 26px; padding: 58px 40px 10px">
+    <span style="align-self: flex-start; background: #e02b20; color: #fff; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">La brasa</span>
+
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px">
+      <div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border: 3px solid #16130f; box-shadow: 9px 9px 0 #16130f; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px); transform: rotate(-1.1deg)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #8d8880">foto · parrilla</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border: 3px solid #16130f; box-shadow: 9px 9px 0 #16130f; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px); transform: rotate(0.7deg)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #8d8880">foto · pollos</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; border: 3px solid #16130f; box-shadow: 9px 9px 0 #16130f; background-image: repeating-linear-gradient(45deg, #fdf6e6 0 12px, #f4ecd8 12px 24px); transform: rotate(-0.5deg)">
+        <span style="font-family: 'Space Mono', monospace; font-size: 14px; color: #8d8880">foto · mesa</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ Horario ============ -->
+  <div style="display: flex; flex-direction: column; gap: 34px; padding: 72px 40px 10px">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+      <span style="background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Cuándo abrimos</span>
+      <h2 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 88px; line-height: 0.92; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Horario</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #e02b20">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #fff">Lunes</p>
+        <p style="margin: 0; padding-top: 10px; border-top: 2px solid rgba(255, 255, 255, 0.55); font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff">Cerrado</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Martes</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Miércoles</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Jueves</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Viernes</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 1.5px solid #d7d5d2; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Noche</span> 20:30 – 23:30
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Sábado</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 1.5px solid #d7d5d2; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Noche</span> 20:30 – 23:30
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #fffdf7">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Domingo</p>
+        <p style="margin: 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding-top: 10px; border-top: 2px solid #16130f; font-family: 'Space Mono', monospace; font-size: 14px; color: #3d3a37; font-variant-numeric: tabular-nums">
+          <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #8d8880">Mediodía</span> 13:00 – 16:00
+        </p>
+      </div>
+
+      <a href="#" style="display: flex; flex-direction: column; gap: 8px; padding: 18px 18px 20px; border: 3px solid #16130f; background: #f2b53c; color: #16130f">
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 26px; line-height: 1; letter-spacing: 0.03em; text-transform: uppercase; color: #16130f">Menú especial</p>
+        <p style="margin: 0; padding-top: 10px; border-top: 2px solid #16130f; font-size: 15px; line-height: 1.45; color: #16130f">Todos los viernes. Resérvalo el día anterior →</p>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ============ Reservas ============ -->
+  <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; margin: 72px 40px 0; padding: 52px 46px; background: #16130f; border: 3px solid #16130f">
+
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <span style="align-self: flex-start; background: #e02b20; color: #fff; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Reservas y pedidos</span>
+      <h2 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 68px; line-height: 0.9; letter-spacing: 0.01em; text-transform: uppercase; color: #f4f1ea">Encarga tu pollo</h2>
+      <p style="margin: 0; max-width: 28rem; font-size: 17px; line-height: 1.7; color: #cfc9c1; text-wrap: pretty">
+        Haz tu pedido por WhatsApp o por teléfono y te decimos la hora de
+        recogida. Para fines de semana y festivos, mejor con un día de
+        antelación: la parrilla se llena pronto.
+      </p>
+
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px">
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: #e02b20; color: #fff; border: 3px solid #f4f1ea; border-radius: 2px; padding: 16px 26px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Pedir por WhatsApp</a>
+        <a href="#" style="display: inline-flex; align-items: center; justify-content: center; background: transparent; color: #f4f1ea; border: 3px solid #f4f1ea; border-radius: 2px; padding: 16px 26px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Llamar · 650 71 13 95</a>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 20px">
+      <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 20px; row-gap: 4px; align-items: baseline; padding-bottom: 20px; border-bottom: 2px solid #3d3a37">
+        <span style="grid-row: 1 / span 2; font-family: Anton, Impact, sans-serif; font-size: 46px; line-height: 0.9; color: #e02b20">01</span>
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 22px; letter-spacing: 0.03em; text-transform: uppercase; color: #f4f1ea">Escríbenos</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #cfc9c1">Dinos qué quieres y para cuántos. Te confirmamos disponibilidad al momento.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 20px; row-gap: 4px; align-items: baseline; padding-bottom: 20px; border-bottom: 2px solid #3d3a37">
+        <span style="grid-row: 1 / span 2; font-family: Anton, Impact, sans-serif; font-size: 46px; line-height: 0.9; color: #e02b20">02</span>
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 22px; letter-spacing: 0.03em; text-transform: uppercase; color: #f4f1ea">Elige la hora</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #cfc9c1">Acordamos la hora de recogida para que salga recién hecho de la brasa.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 20px; row-gap: 4px; align-items: baseline">
+        <span style="grid-row: 1 / span 2; font-family: Anton, Impact, sans-serif; font-size: 46px; line-height: 0.9; color: #e02b20">03</span>
+        <p style="margin: 0; font-family: Anton, Impact, sans-serif; font-size: 22px; letter-spacing: 0.03em; text-transform: uppercase; color: #f4f1ea">Recoge y listo</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #cfc9c1">Pasas por el local, pagas y te lo llevas caliente a casa.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ Ubicación ============ -->
+  <div style="display: flex; flex-direction: column; gap: 34px; padding: 72px 40px 64px">
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 14px">
+      <span style="background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 7px 12px">Dónde estamos</span>
+      <h2 style="margin: 0; font-family: Anton, Haettenschweiler, 'Arial Narrow Bold', Impact, sans-serif; font-size: 88px; line-height: 0.92; letter-spacing: 0.02em; text-transform: uppercase; color: #16130f">Ubicación</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr); gap: 44px; align-items: start">
+
+      <div style="display: flex; flex-direction: column; gap: 26px">
+        <div style="display: flex; flex-direction: column; gap: 3px">
+          <p style="margin: 0 0 4px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Dirección</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #262422">Calle Alcaldes de la Villa, 23</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #262422">1.º piso, local 10</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #262422">El Casar, 19170 · Guadalajara</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 3px">
+          <p style="margin: 0 0 4px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Teléfono</p>
+          <p style="margin: 0"><a href="tel:+34650711395" style="font-family: Anton, Impact, sans-serif; font-size: 34px; letter-spacing: 0.03em; color: #16130f; border-bottom: 3px solid #e02b20">650 71 13 95</a></p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 3px">
+          <p style="margin: 0 0 4px; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #e02b20">Cómo funciona</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #262422">Comida para llevar y recogida en tienda</p>
+          <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #8d8880">Lunes cerrado</p>
+        </div>
+
+        <a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; justify-content: center; background: #e02b20; color: #fff; border: 3px solid #16130f; box-shadow: 7px 7px 0 #16130f; border-radius: 2px; padding: 16px 26px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase">Cómo llegar →</a>
+      </div>
+
+      <div style="position: relative; aspect-ratio: 4 / 3; overflow: hidden; border: 3px solid #16130f; box-shadow: 12px 12px 0 #16130f; background: #efe9db">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" style="width: 100%; height: 100%; display: block">
+          <rect x="0" y="0" width="400" height="300" fill="#efe9db"/>
+          <path d="M0 96 H400 M0 200 H400 M104 0 V300 M256 0 V300" stroke="#dcd3bf" stroke-width="10"/>
+          <path d="M0 148 H400 M180 0 V300 M330 0 V300" stroke="#e6ddc9" stroke-width="6"/>
+          <rect x="18" y="16" width="70" height="62" fill="#e3dac6"/>
+          <rect x="120" y="16" width="46" height="62" fill="#e3dac6"/>
+          <rect x="272" y="16" width="110" height="62" fill="#e3dac6"/>
+          <rect x="18" y="212" width="70" height="70" fill="#e3dac6"/>
+          <rect x="120" y="212" width="120" height="70" fill="#e3dac6"/>
+          <rect x="272" y="212" width="110" height="70" fill="#e3dac6"/>
+          <circle cx="200" cy="124" r="34" fill="#16130f" opacity="0.08"/>
+          <path d="M200 92c-11 0-20 9-20 20 0 15 20 32 20 32s20-17 20-32c0-11-9-20-20-20Z" fill="#e02b20" stroke="#16130f" stroke-width="3.5" stroke-linejoin="round"/>
+          <circle cx="200" cy="112" r="6.5" fill="#fff"/>
+        </svg>
+        <span style="position: absolute; left: 14px; bottom: 14px; background: #16130f; color: #f4f1ea; font-family: 'Space Mono', monospace; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 12px">Mapa · Calle Alcaldes de la Villa, 23</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ Pie ============ -->
+  <div style="background: #16130f; border-top: 3px solid #e02b20; padding: 48px 40px 26px">
+
+    <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) auto; gap: 48px; align-items: start; padding-bottom: 34px">
+
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; gap: 14px">
+          <img src="./logo.jpg" alt="Asador El Casar" style="width: 46px; height: 46px; border-radius: 50%; border: 2px solid #e02b20; object-fit: cover">
+          <span style="font-family: Anton, Haettenschweiler, Impact, sans-serif; font-size: 21px; letter-spacing: 0.03em; text-transform: uppercase; color: #f4f1ea">Asador El Casar</span>
+        </div>
+        <p style="margin: 0; max-width: 22rem; font-size: 15px; line-height: 1.6; color: #a49d94">Pollo a la brasa y comida para llevar en El Casar.</p>
+      </div>
+
+      <div style="display: grid; gap: 10px; justify-items: start; font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase">
+        <a href="#" style="color: #f4f1ea">La carta</a>
+        <a href="#" style="color: #f4f1ea">Fotos</a>
+        <a href="#" style="color: #f4f1ea">Horario</a>
+        <a href="#" style="color: #f4f1ea">Reservas</a>
+        <a href="#" style="color: #f4f1ea">Dónde estamos</a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 18px">
+        <a href="#" style="display: inline-flex; align-items: center; gap: 11px; background: #e02b20; color: #fff; border: 3px solid #f4f1ea; border-radius: 2px; padding: 14px 22px; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase">
+          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; display: block; flex: none">
+            <path d="M12.04 2A9.9 9.9 0 0 0 3.6 17.1L2.5 21.5l4.55-1.19A9.9 9.9 0 1 0 12.04 2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9.1 7.6c-.2-.45-.4-.46-.6-.47h-.5c-.18 0-.47.07-.71.34-.25.27-.94.92-.94 2.24s.96 2.6 1.1 2.78c.13.18 1.86 2.98 4.6 4.06 2.28.9 2.74.72 3.24.67.5-.04 1.6-.65 1.82-1.29.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31-.27-.14-1.6-.79-1.84-.88-.25-.09-.43-.13-.61.14-.18.27-.7.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.6-1.5-1.87-.16-.27-.02-.42.12-.55.12-.12.27-.32.4-.48.14-.16.18-.27.28-.45.09-.18.04-.34-.02-.48-.07-.13-.6-1.45-.83-1.98Z" fill="currentColor"/>
+          </svg>
+          WhatsApp · 650 71 13 95
+        </a>
+
+        <div style="display: flex; gap: 12px">
+          <a href="#" aria-label="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #3d3a37; border-radius: 50%; color: #f4f1ea">
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; display: block">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #3d3a37; border-radius: 50%; color: #f4f1ea">
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; display: block">
+              <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M13.4 19.4v-5.9h2l.37-2.3h-2.37V9.7c0-.66.19-1.11 1.14-1.11h1.29V6.53a17 17 0 0 0-1.86-.1c-1.85 0-3.11 1.13-3.11 3.2v1.57H8.84v2.3h2.02v5.9Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Llamar por teléfono" style="display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border: 2px solid #3d3a37; border-radius: 50%; color: #f4f1ea">
+            <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; display: block">
+              <path d="M6.3 3.5h2.9l1.5 3.7-2 1.4a11.5 11.5 0 0 0 5.4 5.4l1.4-2 3.7 1.5v2.9a1.6 1.6 0 0 1-1.8 1.6C10.6 19.6 4.4 13.4 4.7 5.3A1.6 1.6 0 0 1 6.3 3.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-top: 22px; border-top: 2px solid #3d3a37; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.05em; color: #8d8880">
+      <p style="margin: 0">© 2026 Asador El Casar · Comida para llevar</p>
+      <p style="margin: 0">Calle Alcaldes de la Villa, 23 · El Casar, 19170</p>
+    </div>
+
+    <div style="display: flex; justify-content: center; padding-top: 18px">
+      <span style="font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff">Desarrollado por Daniel Aparisi</span>
+    </div>
+
+  </div>
+
+</div>
+</x-dc>
+<script data-dc-script data-props='{"$preview":{"width":1200,"height":4560}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
